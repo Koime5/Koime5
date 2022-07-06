@@ -20,11 +20,11 @@ body {
     background-color: blanchedalmond;
     font-family: Arial, Helvetica, sans-serif;
 }
-li {
+li.li {
     float: left;
     border-right: 1px solid #bbb;
 }
-li:last-child {
+li.li:last-child {
     border-right: none;
 }
 li a{

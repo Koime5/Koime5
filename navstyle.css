@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* * is essential and if there is not box sizing,annoying problems gonna kill you*/
+body{
+    background-color: rgb(248, 247, 246);
+}
+nav{
+    width: 100%;
+    font-family: sans-serif;
+    position: relative;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    min-height: 8vh;
+}
+.nhead{
+    font-family: Helvetica;
+    text-align: center;
+    position: absolute;
+    left: 2%;
+    color: rgb(8, 236, 57);
+    cursor: default;
+}
+.nitems{
+    position: absolute;
+    right: 2%;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+.nitems > li {
+    list-style-type: none;
+}
+.nitems > li > a{
+    border: 3px solid rgb(228, 133, 133);
+    border-radius: 30px;
+    padding: 4px 8px;
+    background-color: rgb(228, 133, 133);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.nitems > li > a:hover{
+    color: black;
+    font-size: 16px;
+    background-color: greenyellow;
+    border: 6px solid greenyellow;
+}
+#nactive{
+    background-color: greenyellow;
+    border: 3px solid greenyellow;
+}
+#nbars{
+    position: absolute;
+    right:2%;
+    display: none;
+    cursor: pointer;
+}
+#nbars div{
+    width: 25px;
+    height: 3px;
+    background-color: rgb(228, 133, 133);
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:940px) {
+    .nitems{
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+    }
+}
+@media screen and (max-width:640px) {
+    .nitems{
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+    }
+}
+@media screen and (max-width:550px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nitems{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        width: 80%;
+    }
+    .navshow{
+        transform: translateX(0%);
+    }
+    #nbars{
+        display: block;
+    }
+    .nitems > li > a{
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+    }
+    .nitems > li > a:hover, #nactive{
+        font-size: 18px;
+        color: coral;
+        border: none;
+        background-color: transparent;
+    }
+    .BtoX .bar2{
+        opacity: 0;
+    }
+    .BtoX .bar1{
+        transform: rotate(-45deg) translate(-5px,5px);
+    }
+    .BtoX .bar3{
+        transform: rotate(45deg) translate(-5px,-5px);
+    }
+}

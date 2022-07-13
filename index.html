@@ -18,7 +18,7 @@
         var loader = document.getElementById("preloader");
         window.addEventListener("load", function(){
             setTimeout( function() => {
-            loader.style.display = "none";
+            document.body.removeChild(preloader);
             }, 500);
         });
     </script>

@@ -106,8 +106,8 @@ nav{
         position: fixed;
         /*take care right here or body overflow won't work*/
         right: 0px;
-        height: 92vh;
-        top: 8vh;
+        height: 100%;
+        top: 40px;
         background-color:black;
         display: flex;
         flex-direction: column;

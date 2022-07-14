@@ -3,47 +3,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
-<!--I still haven't learnt javascript at this point
-    so I don't link this with js file but with inbuilt script.
-    I will update this after learning javascript or may be not :3-->
-<head> 
-    <title>
-        Koime5
-    </title>
+<head>
+    <title>Home Page</title>
 </head>
 <body>
-    <div id="preloader">
-    </div>
-    <script>
-        var loader = document.getElementById("preloader");
-        window.addEventListener("load", function(){
-            setTimeout(function(){
-            loader.style.display = "none";
-            },500);
-        });
-    </script>
+    <!--Preloader-->
+    <section id="preloader">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+        <script>
+            var loader = document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.parentElement.removeChild(loader);
+            });
+        </script>
+    </section>
+    <!--Nav bar-->
     <nav>
-        <!--Each web has only one nav bar 
-            so I think it is better no class-->
         <div class="nhead">
             <h2>Koime5</h2>
-            <!--Can change into img or icon as you want-->
         </div>
         <ul class="nitems" id="nitems">
             <li><a href="#" id="nactive">Home</a></li>
-            <li><a href="#">Contact</a></li>
             <li><a href="#">Projects</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
         </ul>
-        <!--This items can be changed-->
         <div id="nbars" onclick="shownav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-        <!--we need this for three bars animation to cross X. 
-            I recommend not to change any of this div-->
-        <!--nhead, nitems, nactive, and nbars-->
         <script>
             function shownav() {
                 document.getElementById("nitems").classList.toggle('navshow');

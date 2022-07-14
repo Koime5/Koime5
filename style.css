@@ -96,7 +96,7 @@ nav{
     right: 2%;
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
 }
 .nitems > li {
     list-style-type: none;
@@ -168,13 +168,11 @@ nav{
         height: 100vh;
         top: 40px;
         background-color:black;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+        display: block;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        width: 80%;
+        transition: transform 0.3s ease-in;
+        width: 100%;
+        text-align: center;
     }
     .navshow{
         transform: translateX(0%);
@@ -182,18 +180,23 @@ nav{
     #nbars{
         display: block;
     }
+    .nitems > li {
+        width: 100%;
+        margin: 8vh 0;
+    }
     .nitems > li > a{
-        font-size: 18px;
+        width: 100%;
+        font-size: 20px;
         border: none;
         background-color: transparent;
-        opacity: 0;
-        transition: opacity 0.8s ease;
+        margin-right: -100%;
+        transition: all 0.8s cubic-bezier(0.68,-0.55,0.265,1.55);
     }
-        .navshow > li > a{
-        opacity: 1;
+    .navshow > li > a{
+        margin-right: 0px;
     }
     .nitems > li > a:hover, #nactive{
-        font-size: 18px;
+        font-size: 20px;
         color: coral;
         border: none;
         background-color: transparent;

@@ -34,20 +34,20 @@
         <script>
             var loader = document.getElementById("preloader");
             window.addEventListener("load", function(){
-                
+                loader.parentElement.removeChild(loader);
             });
         </script>
     </section>
     <!--Nav bar-->
     <nav>
         <div class="nhead">
-            <h2>Koime5</h2>
+            <h2 data-text="Koime5">Koime5</h2>
         </div>
         <ul class="nitems" id="nitems">
             <li><a href="#" id="nactive">Home</a></li>
-            <li><a href="Projects.html">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-            <li><a href="Feedback.html">Feedback</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Feedback</a></li>
         </ul>
         <div id="nbars" onclick="shownav()">
             <div class="bar1"></div>

@@ -248,7 +248,7 @@ nav{
         z-index: 1;
         position: fixed;
         /*take care right here or body overflow won't work*/
-        right: 2%;
+        left:2%;
         height: auto;
         top: 80px;
         background-color:rgba(255,255,255,0.3);

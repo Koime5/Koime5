@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: rgb(0, 0, 0);
+}
 /*Preloader*/
 #preloader{
     position: fixed;
@@ -64,8 +67,6 @@
 }
 /*Background*/
 .lights{
-    background: black;
-    height:100vh;
     position: fixed;
     display: flex;
     z-index: 0;
@@ -244,21 +245,25 @@ nav{
         overflow-x: hidden;
     }
     .nitems{
-        z-index: 1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 2;
         position: fixed;
         /*take care right here or body overflow won't work*/
-        right: -100%;
+        right: 2%;
         height: auto;
         top: 80px;
         background-color:rgba(255,255,255,0.3);
         border-radius: 10px;
         display: block;
+        transform: translateX(120%);
         transition: transform 0.3s ease-in;
-        width: 99%;
+        width: 96%;
         text-align: center;
+        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
     }
     .navshow{
-        right: 2%;
+        transform: translateX(0%);
     }
     #nbars{
         display: block;

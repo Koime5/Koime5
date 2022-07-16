@@ -69,7 +69,6 @@ body{
 /*Background*/
 .lights{
     position: fixed;
-    overflow-x: hidden;
     display: flex;
     z-index: 0;
     width: 100%;

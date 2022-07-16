@@ -65,6 +65,7 @@
 /*Background*/
 .lights{
     background: black;
+    height:100vh;
     position: fixed;
     display: flex;
     z-index: 0;

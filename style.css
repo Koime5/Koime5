@@ -249,19 +249,18 @@ nav{
         z-index: 1;
         position: fixed;
         /*take care right here or body overflow won't work*/
-        left:2%;
+        right: -100%;
         height: auto;
         top: 80px;
         background-color:rgba(255,255,255,0.3);
         border-radius: 10px;
         display: block;
-        transform: translateX(120%);
         transition: transform 0.3s ease-in;
         width: 99%;
         text-align: center;
     }
     .navshow{
-        transform: translateX(0%);
+        right: 2%;
     }
     #nbars{
         display: block;

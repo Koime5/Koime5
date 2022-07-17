@@ -62,11 +62,13 @@
         transform: scale(0);
     }
 }
-/*Background
+/*Background*/
 .lights{
     position: fixed;
+    top: 0;
+    background: black;
     display: flex;
-    z-index: 0;
+    z-index: -1;
     width: 100%;
     align-items: center;
     justify-content: space-around;

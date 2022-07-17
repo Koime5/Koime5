@@ -85,7 +85,7 @@ body{
                 0 0 25px #08f7fe,
                 0 0 50px #08f7fe,
                 0 0 200px #08f7fe,; 
-    animation: bgneonlights 15s linear infinite;
+    animation: bgneonlights 15s linear -4s infinite;
     animation-duration: calc(100s/ var(--l));
 }
 @keyframes bgneonlights {

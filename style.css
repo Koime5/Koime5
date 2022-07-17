@@ -75,7 +75,7 @@ body{
     justify-content: space-around;
 }
 .lights span{
-    position: relative;
+    position: fixed;
     width: 5px;
     height: 5px;
     background: #08f7fe;

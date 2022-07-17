@@ -5,7 +5,7 @@
 }
 /*Preloader*/
 #preloader{
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 100;
     display: flex;

@@ -75,7 +75,7 @@ body{
     justify-content: space-around;
 }
 .lights span{
-    position: fixed;
+    position: relative;
     width: 5px;
     height: 5px;
     background: #08f7fe;
@@ -248,25 +248,22 @@ nav{
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         z-index: 2;
-        position: absolute;
+        position: fixed;
         /*take care right here or body overflow won't work*/
         right: 2%;
         height: auto;
         top: 80px;
         background-color:rgba(255,255,255,0.3);
         border-radius: 10px;
-        display: none;
-        width: 99%;
+        display: block;
+        transform: translateX(120%);
+        transition: transform 0.3s ease-in;
+        width: 96%;
         text-align: center;
         box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
     }
     .navshow{
-        display: block;
-        animation: navshow 0.6s linear;
-    }
-    @keyframes navshow {
-        0%{ transform: translateX(120%);}
-        100%{ transform: translateX(0%);}
+        transform: translateX(0%);
     }
     #nbars{
         display: block;

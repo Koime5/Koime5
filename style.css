@@ -117,11 +117,10 @@ body{
 }
 /*Nav bar*/
 nav{
-    width: 96%;
+    width: 100%;
     font-family: sans-serif;
     position: relative;
-    top: 2vh;
-    left: 2%;
+    top: 0;
     background-color: rgba(255,255,255,0.3);
     border-radius: 10px;
     box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
@@ -245,22 +244,21 @@ nav{
         overflow-x: hidden;
     }
     .nitems{
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        z-index: 2;
+        
+        z-index: 0;
         position: fixed;
         /*take care right here or body overflow won't work*/
-        right: 2%;
-        height: auto;
+        right: 0;
+        height: 100vh;
         top: 80px;
         background-color:rgba(255,255,255,0.3);
         border-radius: 10px;
         display: block;
         transform: translateX(120%);
         transition: transform 0.3s ease-in;
-        width: 96%;
+        width: 100%;
         text-align: center;
-        box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+        
     }
     .navshow{
         transform: translateX(0%);

@@ -249,7 +249,7 @@ nav{
         /*take care right here or body overflow won't work*/
         right: 2%;
         height: auto;
-        top: 80px;
+        top: 12vh;
         background-color:rgba(255,255,255,0.3);
         border-radius: 10px;
         display: block;

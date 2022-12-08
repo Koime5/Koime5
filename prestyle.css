@@ -1,0 +1,56 @@
+body{
+    background-color: skyblue;
+}
+#preloader{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#preloader #loadcanva{
+    width: 50%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+#preloader span{
+    text-transform: uppercase;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 255, 0.514);
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes loading {
+    0%{
+        transform: translateY(0px)
+    }
+    20%{
+        transform: translateY(-30px)
+    }
+    40%,100%{
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width:550px) {
+    #preloader span{
+        width: 20px;
+        height: 20px;
+        font-size: 1em;
+    }
+    #preloader #loadcanva{
+        width: 60%;
+    }
+}

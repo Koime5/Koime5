@@ -4,19 +4,17 @@
         <title>Koime5</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="prestyle.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body onload="setTimeout(loaded, 1100)">
         <section>
             <div id="preloader">
-                <div id="loadcanva">
                     <span style="--i:1;">K</span>
                     <span style="--i:2;">O</span>
                     <span style="--i:3;">I</span>
                     <span style="--i:4;">M</span>
                     <span style="--i:5;">E</span>
                     <span style="--i:6;">5</span>
-                </div>
             </div>
                 <script>
                     var loader = document.getElementById("preloader");
@@ -28,18 +26,35 @@
         <section class="magscroll">
             <div class="container">
                 <section class="one magscroll">
-                    <h1>First Page</h1>
+                    <h1 class="item">Please scroll slowly.</h1>
                 </section>
                 <section class="two magscroll">
-                    <h1>Second Page</h1>
+                    <h1 class="item">Second Page</h1>
                 </section>
                 <section class="three magscroll">
-                    <h1>Third Page</h1>
+                    <h1 class="item">Third Page</h1>
                 </section>
                 <section class="four magscroll">
-                    <h1>Fourth Page</h1>
+                    <h1 class="item">Fourth Page</h1>
                 </section>
             </div>
+            <script>
+                const items = document.querySelectorAll('.item');
+                window.addEventListener('scroll',ShowItem);
+                ShowItem();
+                function ShowItem() {
+                    const show = window.innerHeight;
+                    items.forEach(item=>{
+                        const itemtop = item.getBoundingClientRect().top;
+                        if (itemtop < show){
+                            item.classList.add('active');
+                        }
+                        else {
+                            item.classList.remove('active');
+                        }
+                    });
+                }  
+            </script>
         </section>
     </body>
 </html>

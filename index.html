@@ -43,7 +43,7 @@
                 window.addEventListener('scroll',ShowItem);
                 ShowItem();
                 function ShowItem() {
-                    const show = window.innerHeight;
+                    const show = window.innerHeight*3/4;
                     items.forEach(item=>{
                         const itemtop = item.getBoundingClientRect().top;
                         if (itemtop < show){
